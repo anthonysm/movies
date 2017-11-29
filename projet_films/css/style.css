@@ -1,0 +1,56 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+header{
+  background-color: #00BCD4;
+  color: #F2FCFD;
+  padding-top: 2em;
+}
+
+footer{
+  height: 110px;
+  background-color: #00BCD4;
+  color: #F2FCFD;
+}
+
+img{
+    box-shadow: 0 8px 17px 0  rgba(138, 138, 138, 1);
+}
+
+#img{
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.btn{
+  color: white;
+}
+
+.createur{
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+#film{
+  background-color: #E5E5E5;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+h1{
+  margin-top: auto;
+}
+
+.waves-effect.waves-red div.waves-ripple{
+  background-color: rgba(254, 0, 0, 0.65);
+}
+
+.pagination li.active {
+    background-color: rgba(0, 188, 212, 0.55);
+}
+.wiki{
+  color: black;
+}
