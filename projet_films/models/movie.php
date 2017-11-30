@@ -35,17 +35,30 @@ function filmDesc($pdo, $parts_uri){
   }
 }
 
-// function getGenre($pdo){
-//   $genres = $pdo->query("SELECT film.titre, genre.nom FROM `l_film_genre` INNER JOIN film on film.id = l_film_genre.id_film INNER JOIN genre on genre.id = l_film_genre.id_genre");
-//   foreach ($genres as $genre){
-//     if ($titre["id"] == $genres["id"]){
-//       var_dump($genre);
-//     }
-//   }
-// }
+function getGenre($pdo){
+  $genres = $pdo->query("SELECT film.titre, genre.nom FROM l_film_genre INNER JOIN film on film.id = l_film_genre.id_film INNER JOIN genre on genre.id = l_film_genre.id_genre");
+  $genres->execute();
+  $genret = $genres->fetchAll();
+  return $genret;
+}
 
 function getFilmById($pdo, $id){
   $film = $pdo->query('SELECT * FROM film WHERE id = '.$id.'');
   return $film;
 }
+
+function getUser($pdo){
+  $user = $pdo->query("SELECT film.titre, user.pseudo FROM film INNER JOIN user on film.id_user = user.id");
+  $user->execute();
+  $users = $user->fetchAll();
+  return $users;
+}
+
+function inscription($pdo, $parts_uri){
+  $pdo = $pdo;
+  if (isset($parts_uri[3]) == 'validation'){
+    validation($pdo);
+  }
+}
+
 ?>

@@ -13,16 +13,22 @@
 </head>
 <body>
   <header class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col l6">
-          <h1><a href="/projet_films/home/1" class="white-text"><span class="wiki">Wiki</span>Films</a></h1>
-        </div>
-        <div class="col l6">
-          <a href="/projet_films/formulaire" class="white-text">Ajouter un film</a>
-        </div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/projet_films/home/1" class="brand-logo center"><span class="wiki">Wiki</span>Films</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/projet_films/formulaire">Ajouter un film</a></li>
+          <li><a href="/projet_films/inscription">Inscription</a></li>
+          <li><a href="">Connexion</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/projet_films/formulaire">Ajouter un film</a></li>
+          <li><a href="/projet_films/inscription">Inscription</a></li>
+          <li><a href="">Connexion</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
   </header>
   <div class="container-fluid">
     <div class="container">

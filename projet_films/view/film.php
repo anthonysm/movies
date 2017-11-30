@@ -12,8 +12,18 @@ if($films = $film->fetch()) {
           <p><b><?php echo $films['titre']; ?></b></p>
           <p><u>Année:</u> <?php echo $films['annee']; ?></p>
           <p><u>Réalisateur:</u><br /> <?php echo $films['realisateur']; ?></p>
-          <!-- <p><u>Genres: </u> <?php echo $films['genre']; ?></p> -->
-          <p><u>Ajouté par:</u> <?php echo $films['id_user']; ?></p>
+          <p><u>Genres:</u>
+            <?php foreach ($genre as $genreso){
+                    if ($films['titre'] == $genreso['titre']){
+                      echo $genreso['nom'].' ';
+                    }
+                  } ?></p>
+          <p><u>Ajouté par:</u>
+            <?php foreach ($user as $ajout){
+                    if($ajout['titre'] == $films['titre']){
+                      echo $ajout['pseudo'];
+                    }
+                  } ?></p>
         </div>
       </div>
       <p>Description: <?php echo $films['description']; ?><p>

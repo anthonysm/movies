@@ -1,17 +1,30 @@
 html, body{
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #FAFAFA;
 }
 
-header{
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav{
   background-color: #00BCD4;
   color: #F2FCFD;
-  padding-top: 2em;
+  height: 100px;
+  padding-top: 20px;
 }
 
 footer{
-  height: 110px;
+  flex: 1 0 auto;
+  background-color: #00BCD4;
+  color: #F2FCFD;
+}
+
+.page-footer{
   background-color: #00BCD4;
   color: #F2FCFD;
 }
@@ -20,9 +33,28 @@ img{
     box-shadow: 0 8px 17px 0  rgba(138, 138, 138, 1);
 }
 
+#carre{
+  background-color: #00BCD4;
+  color: white;
+}
+
+#div-ma{
+  position: relative;
+  margin-top: 30px;
+}
+
 #img{
   padding-top: 1em;
   padding-bottom: 0.5em;
+}
+
+#btn-material{
+  position: absolute;
+  bottom: 12px;
+}
+
+#page-ma{
+  margin-top: 20px;
 }
 
 .btn{
